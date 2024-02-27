@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.purpleWords{
+  color: #9365FF;
+}
+
+/* ul{
+  list-style: none;
+} */

@@ -1,14 +1,22 @@
 import styled from 'styled-components';
 
-export const Header = styled.header`
-backgroundColor: #000;
+export const StyledHeader = styled.header`
+background-color: #141415;
 padding: 15px 0;
 `
 export const Nav = styled.nav`
 display: flex;
-alightItems: center;
+align-items: center;
+justify-content: center;
 `
 
 export const HeaderNavList = styled.ul`
+list-style: none;
+text-decoration: none;
 display: flex;
+gap: 30px;
 `
+
+export const HeaderLogoWrapper = styled.div`
+  display: inline-flex;
+`;
