@@ -1,9 +1,13 @@
 import React from 'react'
-import { Formik, Form, Field } from 'formik';
+import { Formik } from 'formik';
 import * as Yup from 'yup';
-import Button from '../common/button/button';
+import Button from '../common/button';
+import { Container } from '../common/styled';
+import { StyledForm, 
+    StyledField, 
+    StyledInputWraper, StyledLabel, Error, StyledTitleSpan, StyledTitle, StyledText, StyledSection } from './styled';
 
-const ContactSchema = Yup.object().shape({
+const contactSchema = Yup.object().shape({
 
     name: Yup.string()
         .min(2, 'Too Short!')
@@ -19,43 +23,55 @@ const ContactSchema = Yup.object().shape({
 
 const Contact = () => {
     return (
-        <section>
-            <h4>
-                Feeling like you have seen enough?<br/>
-                <span className={'purpleWords'}>Lets work together!</span>
-            </h4>
-            <Formik
-                initialValues={{
-                    name: '',
-                    message: '',
-                    email: '',
-                }}
-                validationSchema={ContactSchema}
-                onSubmit={values => {
-                    console.log(values);
-                }}
-            >
-                {({ errors, touched }) => (
-                    <Form>
-                        <Field name="name" />
-                        {errors.name && touched.name ? (
-                            <div>{errors.name}</div>
-                        ) : null}
-                        <Field name="email" type="email" />
-                        {errors.email && touched.email ? <div>{errors.email}</div> : null}
-                        <Field name="message" />
-                        {errors.message && touched.message ? (
-                            <div>{errors.message}</div>
-                        ) : null}
-                        <Button id='contact'/>
-                    </Form>
-                )}
-            </Formik>
-            <p>
-                Or if you have any questions left <br/>
-                Be sure to <a href='#'>contact</a> us, we always love to hear you!
-            </p>
-        </section>
+        <StyledSection>
+            <Container>
+                <StyledTitle>
+                    Feeling like you have seen enough?<br />
+                    <StyledTitleSpan>Lets work together!
+                    </StyledTitleSpan>
+                </StyledTitle>
+                <Formik
+                    initialValues={{
+                        name: '',
+                        message: '',
+                        email: '',
+                    }}
+                    validationSchema={contactSchema}
+                    onSubmit={values => {
+                        console.log(values);
+                    }}
+                >
+                    {({ errors, touched }) => (
+                        <StyledForm>
+                            <StyledInputWraper>
+                                <StyledLabel>Name
+                                    <StyledField name="name" />
+                                    {errors.name && touched.name ? (
+                                        <Error>{errors.name}</Error>
+                                    ) : null}
+                                </StyledLabel>
+                                <StyledLabel>Email
+                                    <StyledField name="email" type="email" />
+                                    {errors.email && touched.email ? <Error>{errors.email}</Error> : null}
+                                </StyledLabel>
+                            </StyledInputWraper>
+                            <StyledLabel>Message
+                                <StyledField name="message" />
+                                {errors.message && touched.message ? (
+                                    <Error>{errors.message}</Error>
+                                ) : null}
+
+                            </StyledLabel>
+                            <Button id='contact' />
+                        </StyledForm>
+                    )}
+                </Formik>
+                <StyledText>
+                    Or if you have any questions left <br />
+                    Be sure to <a href='#'>contact</a> us, we always love to hear you!
+                </StyledText>
+            </Container>
+        </StyledSection>
     )
 }
 

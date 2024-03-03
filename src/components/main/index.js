@@ -1,3 +1,3 @@
-import Contact from '../contact'
+import Main from "./Main";
 
-export default Contact
+export default Main

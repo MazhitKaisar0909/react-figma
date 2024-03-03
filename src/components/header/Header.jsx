@@ -5,7 +5,6 @@ import { Container} from '../common/styled';
 import HeaderLogo from '../icons/HeaderLogo';
 
 const Header = () => {
-  console.log(configHeader)
   return (
     <StyledHeader>
       <Container>

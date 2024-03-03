@@ -8,6 +8,7 @@ export const router = createBrowserRouter([
         element: (
             <>
                 <Header />
+                <Outlet />
                 <Footer />
             </>
         ),
