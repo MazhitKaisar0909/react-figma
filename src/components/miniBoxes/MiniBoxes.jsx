@@ -1,9 +1,7 @@
 import React from 'react';
 import Laptop from './Laptop';
-import Boxes from './Boxes';
 import { Container } from '../common/styled';
-import { StyledUl, StyledDiv } from './styled'
-import { configMiniBoxes } from './configMiniBoxes';
+import { StyledDiv } from './styled'
 
 
 const MiniBoxes = () => {
@@ -11,11 +9,6 @@ const MiniBoxes = () => {
     <StyledDiv>
         <Container>
             <Laptop /> 
-            <StyledUl>
-                {configMiniBoxes.map((item)=>(
-                    <Boxes key={item.title} {...item}/>
-                ))}
-            </StyledUl>   
         </Container>  
     </StyledDiv>
   )

@@ -1,8 +1,8 @@
-import React from 'react'
-import { StyledItem, StyledSubTitle, StyledP, StyledWraper, StyledButton  } from './styled'
-import { AiFillPlusCircle } from "react-icons/ai";
+import React, { useState } from 'react'
+import { StyledItem, StyledSubTitle, StyledP, StyledWraper, StyledButton, StyledPlus, StyledCross  } from './styled'
 
 const Product = ({ title, text }) => {
+    const [isOpen, setOpen] = useState(false);
     return (
         <StyledItem>
             <StyledWraper>
@@ -10,14 +10,17 @@ const Product = ({ title, text }) => {
                     {title}
                 </StyledSubTitle>
 
-                <StyledButton>
-                    <AiFillPlusCircle />
+                <StyledButton onClick={()=>{setOpen(prev=>!prev)}}>
+                    {!isOpen && <StyledPlus />}
+                    {isOpen && <StyledCross />}
                 </StyledButton>
             </StyledWraper>
 
-            <StyledP>
-                {text}
-            </StyledP>
+            {isOpen && 
+                <StyledP>
+                    {text}
+                </StyledP>
+            }
         </StyledItem>
     )
 }

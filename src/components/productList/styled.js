@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { AiFillPlusCircle } from "react-icons/ai";
+import { RxCrossCircled } from "react-icons/rx";
 
 export const StyledSection = styled.section`
     padding: 30px 0;
@@ -6,6 +8,8 @@ export const StyledSection = styled.section`
 
 export const StyledH2 = styled.h2`
     font-size: xx-large;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
 `
 
 export const StyledP = styled.p`
@@ -28,6 +32,7 @@ export const StyledItem = styled.li`
 
 export const StyledSubTitle = styled.h6`
     margin-bottom: 17px;
+    font-weight: 700;
 `
 
 export const StyledWraper = styled.div`
@@ -41,3 +46,12 @@ export const StyledButton = styled.button`
     cursor: pointer;
 `
 
+export const StyledPlus = styled(AiFillPlusCircle)`
+    font-size: 20px;
+    color: #fff;
+`;
+
+export const StyledCross = styled(RxCrossCircled)`
+    font-size: 20px;
+    color: rgba(87, 255, 154, 1);
+`;

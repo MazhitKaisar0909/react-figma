@@ -1,5 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { StyledUl } from './styled'
+import Boxes from './Boxes';
+import {configMiniBoxes} from './configMiniBoxes'
+import { Container } from '../common/styled';
 
 const Moon = () => {
     const textRef = useRef(null);
@@ -48,10 +52,17 @@ const Moon = () => {
 
     return (
         <div style={{ position: 'relative' }}>
-            <div id="planet" ref={planetRef}></div>
-            <svg width="100%" height="100%" style={{ position: 'absolute', top: 0, left: 0 }}>
-                <text ref={textRef}>Your Text Here</text>
-            </svg>
+            <Container>
+                <StyledUl>
+                    {configMiniBoxes.map((item) => (
+                        <Boxes key={item.title} {...item} />
+                    ))}
+                </StyledUl>
+                <div id="planet" ref={planetRef}></div>
+                <svg width="100%" height="100%" style={{ position: 'absolute', top: 0, left: 0 }}>
+                    <text ref={textRef}>Your Text Here</text>
+                </svg>
+            </Container>
         </div>
     );
 };
