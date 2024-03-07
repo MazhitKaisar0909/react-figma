@@ -14,4 +14,10 @@ export const StyledButton = styled.button`
   margin-top: 7%;
 
   cursor: pointer;
+
+  &:hover{
+        background-color: #fff;
+        color: rgba(40, 40, 40, 1);
+        transition: 0.7s;
+    }
 `

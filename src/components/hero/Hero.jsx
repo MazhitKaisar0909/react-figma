@@ -1,7 +1,7 @@
 import React from 'react'
-import { HeroSection, HeroSubTitle, HeroTitle, TitleWrapper, BearWrapper, GrayBlock, BlockButtonWrapper, MiniButton, PurpleWord, GreenWord, BoldWord, MainImg, SliderWrapper, TextButtonWrapper, TextButtonH2, TextButtonP, SilderButton, SliderButtonWrapper } from './styled'
+import { HeroSection, HeroSubTitle, HeroTitle, TitleWrapper, BearWrapper, GrayBlock, BlockButtonWrapper, MiniButton, PurpleWord, GreenWord, BoldWord, MainImg, SliderWrapper, TextButtonWrapper, TextButtonH2, TextButtonP, SilderButton, SliderButtonWrapper, StyledArrow } from './styled'
 import { Container } from '../common/styled'
-import { FaArrowRightLong } from "react-icons/fa6";
+
 import ImgBear from '../../assets/main/mainBigBear.png';
 import ImgSlider from '../../assets/main/slider.png';
 
@@ -23,9 +23,10 @@ const Hero = () => {
                     <GrayBlock>
                         Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.
                         <BlockButtonWrapper>
+                            <br />
                             by: BookService
                             <MiniButton>
-                                <FaArrowRightLong />
+                                <StyledArrow />
                             </MiniButton>
                         </BlockButtonWrapper>
                     </GrayBlock>

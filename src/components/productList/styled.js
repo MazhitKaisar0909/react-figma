@@ -48,10 +48,10 @@ export const StyledButton = styled.button`
 
 export const StyledPlus = styled(AiFillPlusCircle)`
     font-size: 20px;
-    color: #fff;
-`;
+    color: rgba(41, 41, 41, 1);
+`
 
 export const StyledCross = styled(RxCrossCircled)`
     font-size: 20px;
     color: rgba(87, 255, 154, 1);
-`;
+`
