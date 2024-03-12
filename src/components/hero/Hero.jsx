@@ -1,11 +1,12 @@
-import React from 'react'
-import { HeroSection, HeroSubTitle, HeroTitle, TitleWrapper, BearWrapper, GrayBlock, BlockButtonWrapper, MiniButton, PurpleWord, GreenWord, BoldWord, MainImg, SliderWrapper, TextButtonWrapper, TextButtonH2, TextButtonP, SilderButton, SliderButtonWrapper, StyledArrow } from './styled'
-import { Container } from '../common/styled'
-
+import React, {useState} from 'react'
+import { HeroSection, HeroSubTitle, HeroTitle, TitleWrapper, BearWrapper, GrayBlock, BlockButtonWrapper, MiniButton, PurpleWord, GreenWord, BoldWord, MainImg, SliderWrapper, TextButtonWrapper, TextButtonH2, TextButtonP, SilderButton, SliderButtonWrapper, StyledArrow } from './styled';
+import { Container } from '../common/styled';
 import ImgBear from '../../assets/main/mainBigBear.png';
 import ImgSlider from '../../assets/main/slider.png';
+import Modal from '../common/modal/Modal';
 
 const Hero = () => {
+    const [isModalOpen, setModalOpen] = useState(false);
     return (
         <HeroSection>
             <Container>
@@ -42,13 +43,14 @@ const Hero = () => {
                             <br/> projects: quality, speed, customizability and comfort.
                         </TextButtonP>
                         <SliderButtonWrapper>
-                            <SilderButton>
+                            <SilderButton onClick={()=>setModalOpen(true)}>
                                 Contacts
                             </SilderButton>
                             <SilderButton>
                                 Start a project
                             </SilderButton>
                         </SliderButtonWrapper>
+                        {isModalOpen && <Modal onClick={setModalOpen}/>}
                     </TextButtonWrapper>
                     <MainImg src={ImgSlider} alt='slider'/>
                 </SliderWrapper>

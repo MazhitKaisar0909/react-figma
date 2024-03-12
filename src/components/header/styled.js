@@ -18,6 +18,13 @@ display: flex;
 gap: 30px;
 `
 
-export const HeaderLogoWrapper = styled.div`
+export const HeaderNavLogoWrapper = styled.div`
   display: flex;
-`;
+  align-items: center;
+  gap: 400px;
+`
+
+export const HeaderNavLink = styled.a`
+  text-decoration: none;
+  color: #fff;
+`

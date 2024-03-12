@@ -1,22 +1,22 @@
-import footerGmail from '../../assets/footer/footerGmail.svg';
-import footerInst from '../../assets/footer/footerInst.svg';
-import footerCotact from '../../assets/footer/footerCotact.svg';
+import svgGmail from '../../assets/svg/svgGmail.svg';
+import svgInst from '../../assets/svg/svgInst.svg';
+import svgCotact from '../../assets/svg/svgCotact.svg';
 
 export const configFooterContacts = [{
     text: 'codebear@gmail.com',
     link: 'mailto:codebear@gmail.com',
     id: 'codebear@gmail.com',
-    icon: footerGmail
+    icon: svgGmail
 }, {
     text: '@codebearit',
     link: 'https://instagram.com/codebearit',
     id: 'codebearit',
-    icon: footerInst
+    icon: svgInst
 }, {
     text: '@codebearmanager',
     link: 'https://t.me/codebearmanager',
     id: 'codebearmanager',
-    icon: footerCotact
+    icon: svgCotact
 }]
 
 export const configFooterRout = [{

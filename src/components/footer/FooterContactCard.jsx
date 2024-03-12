@@ -1,13 +1,16 @@
 import React from 'react';
+import { FooterContCardLi, FooterContCardLink, FooterContCardSvg, FooterContCardText } from './styled';
 
 const FooterContactCard = ({ link, icon, text }) => {
   return (
-    <li style={{ listStyle: 'none', marginTop: '15px'}}>
-      <a href={link} style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-        <img src={icon} style={{ marginRight: '8px' }} />
-        <span style={{ color: '#ffff' }}>{text}</span>
-      </a>
-    </li>
+    <FooterContCardLi>
+      <FooterContCardLink href={link}>
+        <FooterContCardSvg src={icon} />
+        <FooterContCardText>
+          {text}
+        </FooterContCardText>
+      </FooterContCardLink>
+    </FooterContCardLi>
   );
 };
 

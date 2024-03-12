@@ -1,12 +1,15 @@
 import React from 'react'
+import { FooterRoutCardLi, FooterRoutCardLink, FooterRoutCardSpan } from './styled'
 
 export const FooterRoutCard = ({ link, text }) => {
     return (
-        <li style={{ listStyle: 'none', marginTop: '15px'}}>
-            <a href={link} style={{ 'textDecoration': 'none' }}>
-                <span style={{ 'color': '#ffff' }}>{text}</span>
-            </a>
-        </li>
+        <FooterRoutCardLi>
+            <FooterRoutCardLink href={link}>
+                <FooterRoutCardSpan>
+                    {text}
+                </FooterRoutCardSpan>
+            </FooterRoutCardLink>
+        </FooterRoutCardLi>
     )
 }
 

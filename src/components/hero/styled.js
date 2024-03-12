@@ -48,6 +48,7 @@ export const GrayBlock = styled.div`
     background: rgba(40, 40, 40, 0.49);
     margin-left: 130px;
     box-shadow: 5px 3px 3px rgba(170, 133, 255, 1);
+    border-radius: 8px;
 `
 
 export const BlockButtonWrapper = styled.div`
@@ -97,6 +98,7 @@ export const TextButtonP = styled.p`
 export const SliderButtonWrapper = styled.div`
     display: flex;
     gap: 8px;
+    position: relative;
 `
 
 export const SilderButton = styled.button`

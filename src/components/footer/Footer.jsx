@@ -3,7 +3,7 @@ import { Container } from '../common/styled';
 import { configFooterContacts, configFooterRout } from './configFooter';
 import FooterContactCard from './FooterContactCard';
 import FooterRoutCard from './FooterRoutCard';
-import { StyledFooter, FooterNav,} from './styled';
+import { StyledFooter, FooterNav, FooterP } from './styled';
 
 const Footer = () => {
     return (
@@ -16,9 +16,9 @@ const Footer = () => {
                         ))}
                     </ul>
 
-                    <p style={{ 'color': '#FFFF' }}>
+                    <FooterP>
                         CODEBEAR.
-                    </p>
+                    </FooterP>
 
                     <ul>
                         {configFooterRout.map(rout =>
