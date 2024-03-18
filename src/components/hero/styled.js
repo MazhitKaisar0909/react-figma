@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { FaArrowRightLong } from "react-icons/fa6";
+import imgGrayBackground from '../../assets/main/grayBlock.png';
+import imgBorderGrayBlock from '../../assets/main/borderGrayBlock.png';
 
 export const HeroSection = styled.section`
 
@@ -45,10 +47,10 @@ export const GrayBlock = styled.div`
     width: 408px;
     font-family: "Inter", sans-serif;
     padding: 23px;
-    background: rgba(40, 40, 40, 0.49);
     margin-left: 130px;
-    box-shadow: 5px 3px 3px rgba(170, 133, 255, 1);
-    border-radius: 8px;
+    background-image: url(${imgGrayBackground});
+    /* background-image: url(${imgBorderGrayBlock}); */
+    background-size: cover;
 `
 
 export const BlockButtonWrapper = styled.div`
