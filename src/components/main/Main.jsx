@@ -13,7 +13,7 @@ const Main = () => {
       <Hero/>
       <ProductList/>
       <MiniBoxes/>
-      {/* <Moon /> */}
+      <Moon />
       <Contact />
     </StyledMain>
   )
