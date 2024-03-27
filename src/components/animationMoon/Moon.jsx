@@ -1,6 +1,6 @@
-import React from 'react'
-import { Section, Moon, Circle, Span, ImgMoon } from './styled'
-import ImgMoonBear from '../../assets/main/moonWithBear.png'
+import React from 'react';
+import { Section, Moon, Circle, Span, ImgMoon } from './styled';
+import ImgMoonBear from '../../assets/main/moonWithBear.png';
 
 const AnimMoon = () => {
     const text = "LETS MAKE THE INTERNET MORE COMFORTABLE";

@@ -7,6 +7,14 @@ import Modal from '../common/modal/Modal';
 
 const Hero = () => {
     const [isModalOpen, setModalOpen] = useState(false);
+    const handleModalOpen = ()=>{
+        setModalOpen(true)
+        document.body.style.overflow = "hidden"
+    };
+    const handleModalClose = ()=>{
+        setModalOpen(false)
+        document.body.style.overflow = "auto"
+    };
     return (
         <HeroSection>
             <Container>
@@ -43,15 +51,17 @@ const Hero = () => {
                             <br/> projects: quality, speed, customizability and comfort.
                         </TextButtonP>
                         <SliderButtonWrapper>
-                            <SilderButton onClick={()=>setModalOpen(true)}>
+                            <SilderButton onClick={
+                                handleModalOpen
+                            }>
                                 Contacts
                             </SilderButton>
                             <SilderButton>
                                 Start a project
                             </SilderButton>
                         </SliderButtonWrapper>
-                        {isModalOpen && <Modal onClick={setModalOpen}/>}
-                    </TextButtonWrapper>
+                        {isModalOpen && <Modal onClick={handleModalClose}/>}
+                    </TextButtonWrapper>``
                     <MainImg src={ImgSlider} alt='slider'/>
                 </SliderWrapper>
             </Container>

@@ -20,6 +20,7 @@ export const ModalWrapperStyled = styled.div`
   height: 100%; 
   overflow: auto;
   background-color: rgba(0,0,0,0.63); 
+  
 `
 
 export const ModalWindowLi = styled.li`

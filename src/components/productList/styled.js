@@ -4,6 +4,8 @@ import { RxCrossCircled } from "react-icons/rx";
 
 export const StyledSection = styled.section`
     padding: 30px 0;
+    margin-bottom: 250px;
+    margin-top: 70px;
 `
 
 export const StyledH2 = styled.h2`

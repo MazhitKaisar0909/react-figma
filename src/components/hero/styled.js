@@ -37,6 +37,7 @@ export const TitleWrapper = styled.div`
 export const BearWrapper = styled.div`
     display: flex;
     align-items: center;
+    margin-bottom: 70px;
 `
 
 export const MainImg = styled.img`
@@ -45,7 +46,7 @@ export const MainImg = styled.img`
 export const GrayBlock = styled.div`
     width: 408px;
     font-family: "Inter", sans-serif;
-    padding: 23px;
+    padding: 27px;
     margin-left: 130px;
     background-image: url(${imgGrayBlock});
     background-size: cover;
@@ -110,7 +111,7 @@ export const SilderButton = styled.button`
     background-color: rgba(40, 40, 40, 1);
     color: #fff;
     font-family: "DM Sans", sans-serif;
-
+    
     &:hover{
         background-color: #fff;
         color: rgba(40, 40, 40, 1);
