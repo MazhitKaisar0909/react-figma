@@ -4,11 +4,18 @@ export const StyledHeader = styled.header`
 background-color: #141415;
 padding: 15px 0;
 font-family: "DM Sans", sans-serif;
+
+@media (max-width: 744px) {
+    display: none;
+  }
 `
+
 export const Nav = styled.nav`
 display: flex;
 align-items: center;
 justify-content: center;
+
+  
 `
 
 export const HeaderNavList = styled.ul`

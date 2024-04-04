@@ -17,10 +17,31 @@ export const GreenWord = styled.span`
 export const HeroTitle = styled.h1`
     font-size: 60px;
     margin-top: 50px;
+
+    @media (max-width: 744px) {
+        margin-top: 250px;
+        margin-bottom: 30px;
+        font-size: 28px;
+  }
 `
 
 export const HeroSubTitle = styled.p`
     font-family: "Inter", sans-serif;
+    @media (max-width: 744px) {
+        display: none;
+    }
+`
+
+export const HeroSubTitleTablet = styled.p`
+    font-family: "Inter", sans-serif;
+    @media (max-width: 744px) {
+        width: 100px;
+        text-align: center;
+        font-size: 10px;
+    }
+    @media (min-width: 744px) {
+        display: none;
+    }
 `
 
 export const BoldWord = styled.span`
@@ -41,6 +62,9 @@ export const BearWrapper = styled.div`
 `
 
 export const MainImg = styled.img`
+    @media (max-width: 744px){
+        width: 250px;
+    }
 `
 
 export const GrayBlock = styled.div`
@@ -50,6 +74,26 @@ export const GrayBlock = styled.div`
     margin-left: 130px;
     background-image: url(${imgGrayBlock});
     background-size: cover;
+
+    @media (max-width: 744px) {
+        width: 380px;
+        margin-left: 0;
+    }
+`
+
+export const GrayBlockContent = styled.p`
+   @media (max-width: 744px) {
+        display: none;
+    }
+`
+
+export const GrayBlockContentTablet = styled.p`
+   @media (max-width: 744px) {
+        display: block;
+    }
+   @media (min-width: 745px) {
+        display: none;
+    }
 `
 
 export const BlockButtonWrapper = styled.div`
@@ -68,6 +112,9 @@ export const MiniButton = styled.button`
         background-color: #fff;
         transition: 0.7s;
     }
+    @media (max-width: 744px) {
+        width: 38px;
+    }
 `
 
 export const StyledArrow = styled(FaArrowRightLong)`
@@ -84,17 +131,29 @@ export const TextButtonWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 50px;
+    @media (max-width: 744px) {
+        margin-top: 50px;
+        gap: 20px;
+    }
 `
 
 export const TextButtonH2 = styled.h2`
     font-size: 56px;
     font-weight: 700;
+
+    @media (max-width: 744px) {
+        font-size: 28px;
+    }
 `
 
 export const TextButtonP = styled.p`
     font-size: 18px;
     color: rgba(151, 149, 181, 1);
     font-weight: 400;
+
+    @media (max-width: 744px) {
+        font-size: 12px;
+    }
 `
 export const SliderButtonWrapper = styled.div`
     display: flex;
@@ -117,5 +176,28 @@ export const SilderButton = styled.button`
         color: rgba(40, 40, 40, 1);
         transition: 0.7s;
     }
+
+    @media (max-width: 744px) {
+        width: Hug(89px);
+    }
 `
 
+export const TabletStyleWrapper = styled.div`
+    @media (min-width: 744px) {
+        display: none;
+    }
+    @media (max-width: 744px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 250px;
+    }
+    
+`
+
+export const TabletStyleTitle = styled.h1`
+    font-size: 58px;
+    text-align: center;
+    font-weight: bold;
+`

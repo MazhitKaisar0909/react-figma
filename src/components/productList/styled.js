@@ -8,6 +8,15 @@ export const StyledSection = styled.section`
     margin-top: 70px;
 `
 
+export const TitleWrapperProdList = styled.div`
+    @media (max-width: 744px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+`
+
 export const StyledH2 = styled.h2`
     font-size: xx-large;
     font-family: "Inter", sans-serif;

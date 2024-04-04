@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
-import { HeroSection, HeroSubTitle, HeroTitle, TitleWrapper, BearWrapper, GrayBlock, BlockButtonWrapper, MiniButton, PurpleWord, GreenWord, BoldWord, MainImg, SliderWrapper, TextButtonWrapper, TextButtonH2, TextButtonP, SilderButton, SliderButtonWrapper, StyledArrow } from './styled';
+import { HeroSection, HeroSubTitle, HeroTitle, TitleWrapper, BearWrapper, GrayBlock, BlockButtonWrapper, MiniButton, PurpleWord, GreenWord, BoldWord, MainImg, SliderWrapper, TextButtonWrapper, TextButtonH2, TextButtonP, SilderButton, SliderButtonWrapper, StyledArrow, TabletStyleWrapper, TabletStyleTitle, HeroSubTitleTablet, GrayBlockContent, GrayBlockContentTablet } from './styled';
 import { Container } from '../common/styled';
 import ImgBear from '../../assets/main/mainBigBear.png';
 import ImgSlider from '../../assets/main/slider.png';
 import Modal from '../common/modal/Modal';
+import HeaderLogo from '../icons/HeaderLogo';
 
 const Hero = () => {
     const [isModalOpen, setModalOpen] = useState(false);
@@ -19,18 +20,38 @@ const Hero = () => {
         <HeroSection>
             <Container>
                 <TitleWrapper>
+
+                    <TabletStyleWrapper>
+                        <HeaderLogo />
+                        <TabletStyleTitle>
+                            <GreenWord>CODE</GreenWord> 
+                            <br/>
+                            <PurpleWord>BEAR</PurpleWord>
+                        </TabletStyleTitle>
+                        <HeroSubTitleTablet>
+                            Doing <BoldWord>extra</BoldWord> since day one.
+                        </HeroSubTitleTablet>
+                    </TabletStyleWrapper>
+
                     <HeroTitle>
                         <PurpleWord>Turning</PurpleWord>
                         <GreenWord> Ideas</GreenWord>  <PurpleWord>into Digital</PurpleWord> <GreenWord>Realities.</GreenWord>
                     </HeroTitle>
+
                     <HeroSubTitle>
                         Doing <BoldWord>extra</BoldWord> since day one.
                     </HeroSubTitle>
+
                 </TitleWrapper>
                 <BearWrapper>
                     <MainImg src={ImgBear} alt='bigBear'/>
                     <GrayBlock>
-                        Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.
+                        <GrayBlockContent>
+                            Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.
+                        </GrayBlockContent>
+                        <GrayBlockContentTablet>
+                            Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode, damn chuck-a-fill tastes good.Review of our work by some doode.
+                        </GrayBlockContentTablet>
                         <BlockButtonWrapper>
                             <br />
                             by: BookService
@@ -61,7 +82,7 @@ const Hero = () => {
                             </SilderButton>
                         </SliderButtonWrapper>
                         {isModalOpen && <Modal onClick={handleModalClose}/>}
-                    </TextButtonWrapper>``
+                    </TextButtonWrapper>
                     <MainImg src={ImgSlider} alt='slider'/>
                 </SliderWrapper>
             </Container>

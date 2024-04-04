@@ -1,6 +1,9 @@
 import styled, { keyframes } from 'styled-components';
 
 export const ImgMoon = styled.img`
+    @media (max-width: 744px) {
+        width: 635px;
+    }
 `
 
 export const rotateAnimation = keyframes`
@@ -19,15 +22,20 @@ export const Section = styled.section`
     min-height: 100vh;
     transform-style: preserve-3d;
     margin: 200px auto 250px;
+
+    @media (max-width: 744px) {
+        margin: 0;
+    }
 `;
 
 export const Moon = styled.div`
     position: absolute;
+    
 `;
 
 export const Circle = styled.div`
     transform-style: preserve-3d;
-    animation: ${rotateAnimation} 18s linear infinite;
+    animation: ${rotateAnimation} 20s linear infinite;
 `;
 
 export const Span = styled.span`
@@ -39,5 +47,10 @@ export const Span = styled.span`
     transform-origin: center;
     transform-style: preserve-3d;
     padding: 5px 11px;
-    transform: rotateY(calc(${props => props.index} * calc(360deg / 39))) translateZ(450px);
+    transform: rotateY(calc(${props => props.index} * calc(360deg / 40))) translateZ(450px);
+
+    @media (max-width: 744px) {
+        font-size: 3em;
+        transform: rotateY(calc(${props => props.index} * calc(360deg / 40))) translateZ(320px);
+    }
 `;
