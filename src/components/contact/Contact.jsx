@@ -23,7 +23,7 @@ const contactSchema = Yup.object().shape({
 
 const Contact = () => {
     return (
-        <StyledSection>
+        <StyledSection id='contact'>
             <Container>
                 <StyledTitle>
                     Feeling like you have seen enough?<br />

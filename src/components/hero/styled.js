@@ -12,6 +12,10 @@ export const PurpleWord = styled.span`
 export const GreenWord = styled.span`
     color: #57FF9A;
     text-shadow: 0px 0px 7px rgba(87, 255, 154, 1),0 0 2em rgba(87, 255, 154, 1),0 0 1.2em rgba(87, 255, 154, 1);
+
+    @media (max-width: 445px) {
+        text-shadow: none;
+    }
 `
 
 export const HeroTitle = styled.h1`
@@ -23,6 +27,10 @@ export const HeroTitle = styled.h1`
         margin-bottom: 30px;
         font-size: 28px;
   }
+
+  @media (max-width: 445px){
+        display: none;
+    }
 `
 
 export const HeroSubTitle = styled.p`
@@ -59,6 +67,12 @@ export const BearWrapper = styled.div`
     display: flex;
     align-items: center;
     margin-bottom: 70px;
+
+    @media (max-width: 445px){
+        display: flex;
+        flex-direction: column;
+        margin-top: 200px;
+    }
 `
 
 export const MainImg = styled.img`
@@ -79,6 +93,7 @@ export const GrayBlock = styled.div`
         width: 380px;
         margin-left: 0;
     }
+    
 `
 
 export const GrayBlockContent = styled.p`
@@ -94,6 +109,7 @@ export const GrayBlockContentTablet = styled.p`
    @media (min-width: 745px) {
         display: none;
     }
+
 `
 
 export const BlockButtonWrapper = styled.div`
@@ -182,6 +198,10 @@ export const SilderButton = styled.button`
     }
 `
 
+export const HrefButton = styled.a`
+    color: #fff;
+`
+
 export const TabletStyleWrapper = styled.div`
     @media (min-width: 744px) {
         display: none;
@@ -200,4 +220,9 @@ export const TabletStyleTitle = styled.h1`
     font-size: 58px;
     text-align: center;
     font-weight: bold;
+
+    @media (max-width: 445px) {
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px ;
+    }
 `

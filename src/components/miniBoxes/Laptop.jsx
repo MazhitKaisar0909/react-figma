@@ -4,7 +4,7 @@ import { BigWordsH1, BigWordsWraper, BigNumberH1, StyledDivPosition, StyledImg }
 
 const Laptop = () => {
   return (
-    <StyledDivPosition>
+    <StyledDivPosition id='about-us'>
       <BigWordsWraper>
         <BigWordsH1>
           WHY YOU <br /> SHOULD<br /> CHOOSE<br /> US?

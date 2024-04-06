@@ -4,7 +4,7 @@ import { StyledItem, StyledSubTitle, StyledP, StyledWraper, StyledButton, Styled
 const Product = ({ title, text }) => {
     const [isOpen, setOpen] = useState(false);
     return (
-        <StyledItem>
+        <StyledItem id='services'>
             <StyledWraper>
                 <StyledSubTitle>
                     {title}

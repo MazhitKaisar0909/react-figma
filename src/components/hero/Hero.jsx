@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { HeroSection, HeroSubTitle, HeroTitle, TitleWrapper, BearWrapper, GrayBlock, BlockButtonWrapper, MiniButton, PurpleWord, GreenWord, BoldWord, MainImg, SliderWrapper, TextButtonWrapper, TextButtonH2, TextButtonP, SilderButton, SliderButtonWrapper, StyledArrow, TabletStyleWrapper, TabletStyleTitle, HeroSubTitleTablet, GrayBlockContent, GrayBlockContentTablet } from './styled';
+import { HeroSection, HeroSubTitle, HeroTitle, TitleWrapper, BearWrapper, GrayBlock, BlockButtonWrapper, MiniButton, PurpleWord, GreenWord, BoldWord, MainImg, SliderWrapper, TextButtonWrapper, TextButtonH2, TextButtonP, SilderButton, SliderButtonWrapper, StyledArrow, TabletStyleWrapper, TabletStyleTitle, HeroSubTitleTablet, GrayBlockContent, GrayBlockContentTablet, HrefButton } from './styled';
 import { Container } from '../common/styled';
 import ImgBear from '../../assets/main/mainBigBear.png';
 import ImgSlider from '../../assets/main/slider.png';
@@ -78,7 +78,9 @@ const Hero = () => {
                                 Contacts
                             </SilderButton>
                             <SilderButton>
-                                Start a project
+                                <HrefButton href='#contact'>
+                                    Start a project
+                                </HrefButton>
                             </SilderButton>
                         </SliderButtonWrapper>
                         {isModalOpen && <Modal onClick={handleModalClose}/>}

@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 export const ImgMoon = styled.img`
+width: 700px;
     @media (max-width: 744px) {
         width: 635px;
     }
@@ -21,7 +22,7 @@ export const Section = styled.section`
     align-items: center;
     min-height: 100vh;
     transform-style: preserve-3d;
-    margin: 200px auto 250px;
+    margin: 100px auto 100px;
 
     @media (max-width: 744px) {
         margin: 0;
@@ -47,7 +48,7 @@ export const Span = styled.span`
     transform-origin: center;
     transform-style: preserve-3d;
     padding: 5px 11px;
-    transform: rotateY(calc(${props => props.index} * calc(360deg / 40))) translateZ(450px);
+    transform: rotateY(calc(${props => props.index} * calc(360deg / 40))) translateZ(400px);
 
     @media (max-width: 744px) {
         font-size: 3em;
