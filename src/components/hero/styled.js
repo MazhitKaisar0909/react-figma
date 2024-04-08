@@ -76,8 +76,15 @@ export const BearWrapper = styled.div`
 `
 
 export const MainImg = styled.img`
-    @media (max-width: 744px){
-        width: 250px;
+ width: 250px;
+    @media (min-width: 744px){
+        width: 275px;
+    }
+    @media (min-width: 1024px){
+        width: 510px;
+    }
+    @media (min-width: 1440px){
+        width: 555px;
     }
 `
 
@@ -140,48 +147,92 @@ export const StyledArrow = styled(FaArrowRightLong)`
 
 export const SliderWrapper = styled.div`
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+    @media (min-width: 1024px) {
+    justify-content: space-between;}
 `
 
 export const TextButtonWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    @media (max-width: 744px) {
-        margin-top: 50px;
+    margin-top: 50px;
         gap: 20px;
+        margin-bottom: 30px;
+    @media (min-width: 1024px) {
+        flex-direction: column;
+    gap: 50px;
     }
 `
 
 export const TextButtonH2 = styled.h2`
-    font-size: 56px;
-    font-weight: 700;
 
-    @media (max-width: 744px) {
-        font-size: 28px;
+    font-weight: 700;
+    font-size: 28px;
+    @media (min-width: 1024px) {
+        font-size: 56px;
     }
 `
 
 export const TextButtonP = styled.p`
-    font-size: 18px;
-    color: rgba(151, 149, 181, 1);
-    font-weight: 400;
 
-    @media (max-width: 744px) {
-        font-size: 12px;
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 160%;
+/* or 160% */
+text-align: center;
+
+color: #9795B5;
+width:240px;
+
+@media (min-width: 768px) {
+    width:240px;
+        
+    }
+    @media (min-width: 1024px) {
+        font-size: 18px;
+        width:455px;
+        text-align: left;
     }
 `
 export const SliderButtonWrapper = styled.div`
+display: none;
+ @media (min-width: 768px) {
     display: flex;
     gap: 8px;
     position: relative;
+    }
+    
 `
-
+export const SliderButtonWrapperMob = styled.div`
+margin-top: 40px;
+display: flex;
+    gap: 15px;
+    position: relative;
+ @media (min-width: 768px) {
+    display: none;
+    
+    }
+    
+`
 export const SilderButton = styled.button`
+font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+width: 120px;
+        height:45px;
     padding: 15px 20px;
     border-radius: 30px;
-    border: none;
+    border: 1px solid #5197FF;
+    display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
     background-color: rgba(40, 40, 40, 1);
     color: #fff;
@@ -193,13 +244,18 @@ export const SilderButton = styled.button`
         transition: 0.7s;
     }
 
-    @media (max-width: 744px) {
-        width: Hug(89px);
+    @media (min-width: 744px) {
+        font-size: 12px;
     }
 `
 
 export const HrefButton = styled.a`
     color: #fff;
+    &:hover{
+        background-color: #fff;
+        color: rgba(40, 40, 40, 1);
+        transition: 0.7s;
+    }
 `
 
 export const TabletStyleWrapper = styled.div`

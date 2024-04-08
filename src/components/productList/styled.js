@@ -4,17 +4,27 @@ import { RxCrossCircled } from "react-icons/rx";
 
 export const StyledSection = styled.section`
     padding: 30px 0;
-    margin-bottom: 250px;
+    margin-bottom: 80px;
     margin-top: 70px;
+    @media (min-width: 768px) {
+        margin-bottom: 100px;
+  }
+  @media (min-width: 1024px) {
+    margin-bottom: 250px;
+}
 `
 
 export const TitleWrapperProdList = styled.div`
-    @media (max-width: 744px) {
+  display: flex;
+        flex-direction: column;
+    @media (min-width: 768px) {
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
+    @media (min-width: 1024px) {
+        align-items: normal;
+}
 `
 
 export const StyledH2 = styled.h2`
