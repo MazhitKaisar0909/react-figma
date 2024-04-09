@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { HeroSection, HeroSubTitle, HeroTitle,SliderButtonWrapperMob, TitleWrapper, BearWrapper, GrayBlock, BlockButtonWrapper, MiniButton, PurpleWord, GreenWord, BoldWord, MainImg, SliderWrapper, TextButtonWrapper, TextButtonH2, TextButtonP, SilderButton, SliderButtonWrapper, StyledArrow, TabletStyleWrapper, TabletStyleTitle, HeroSubTitleTablet, GrayBlockContent, GrayBlockContentTablet, HrefButton } from './styled';
+import { HeroSection, HeroSubTitle, HeroTitle, TitleWrapper, BearWrapper, GrayBlock, BlockButtonWrapper, MiniButton, PurpleWord, GreenWord, BoldWord, MainImg, SliderWrapper, TextButtonWrapper, TextButtonH2, TextButtonP, SilderButton, SliderButtonWrapper, StyledArrow, TabletStyleWrapper, TabletStyleTitle, HeroSubTitleTablet, GrayBlockContent, GrayBlockContentTablet, HrefButton } from './styled';
 import { Container } from '../common/styled';
 import ImgBear from '../../assets/main/mainBigBear.png';
 import ImgSlider from '../../assets/main/slider.png';
@@ -16,8 +16,6 @@ const Hero = () => {
         setModalOpen(false)
         document.body.style.overflow = "auto"
     };
-
-    
     return (
         <HeroSection>
             <Container>
@@ -71,7 +69,7 @@ const Hero = () => {
                         </TextButtonH2>
                         <TextButtonP>
                             We combine everything the best features in one 
-                            projects: quality, speed, customizability and comfort.
+                            <br/> projects: quality, speed, customizability and comfort.
                         </TextButtonP>
                         <SliderButtonWrapper>
                             <SilderButton onClick={
@@ -81,29 +79,17 @@ const Hero = () => {
                             </SilderButton>
                             <SilderButton>
                                 <HrefButton href='#contact'>
-                                    Start project
+                                    Start a project
                                 </HrefButton>
                             </SilderButton>
                         </SliderButtonWrapper>
                         {isModalOpen && <Modal onClick={handleModalClose}/>}
                     </TextButtonWrapper>
                     <MainImg src={ImgSlider} alt='slider'/>
-                    <SliderButtonWrapperMob>
-                            <SilderButton onClick={
-                                handleModalOpen
-                            }>
-                                Contacts
-                            </SilderButton>
-                            <SilderButton>
-                                <HrefButton href='#contact'>
-                                    Start project
-                                </HrefButton>
-                            </SilderButton>
-                        </SliderButtonWrapperMob>
                 </SliderWrapper>
             </Container>
         </HeroSection>
     )
 }
 
-export default Hero
+export default Hero;
