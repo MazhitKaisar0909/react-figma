@@ -242,10 +242,21 @@ export const BearWrapper = styled.div`
 `;
 
 export const MainImg = styled.img`
-    @media (max-width: 744px){
-        width: 250px;
-    }
-`
+  width: 172px;
+  height: 199px;
+  margin-bottom: -25px;
+  @media (min-width: 768px) {
+    width: 196px;
+    height: 227px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 1045px) {
+    margin-bottom: 0;
+    width: 348px;
+    height: 403px;
+  }
+`;
 
 export const GrayBlock = styled.div`
   position: relative;
@@ -261,90 +272,66 @@ export const OverlayContent = styled.div`
 `;
 
 export const SliderWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-`
+  display: flex;
+  justify-content: space-around;
+`;
 
 export const TextButtonWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    @media (max-width: 744px) {
-        margin-top: 50px;
-        gap: 20px;
-    }
-`
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  @media (max-width: 744px) {
+    margin-top: 50px;
+    gap: 20px;
+  }
+`;
 
 export const TextButtonH2 = styled.h2`
-    font-size: 56px;
-    font-weight: 700;
+  font-size: 56px;
+  font-weight: 700;
 
-    @media (max-width: 744px) {
-        font-size: 28px;
-    }
-`
+  @media (max-width: 744px) {
+    font-size: 28px;
+  }
+`;
 
 export const TextButtonP = styled.p`
-    font-size: 18px;
-    color: rgba(151, 149, 181, 1);
-    font-weight: 400;
+  font-size: 18px;
+  color: rgba(151, 149, 181, 1);
+  font-weight: 400;
 
-    @media (max-width: 744px) {
-        font-size: 12px;
-    }
-`
+  @media (max-width: 744px) {
+    font-size: 12px;
+  }
+`;
 export const SliderButtonWrapper = styled.div`
-    display: flex;
-    gap: 8px;
-    position: relative;
-`
+  display: flex;
+  gap: 8px;
+  position: relative;
+`;
 
 export const SilderButton = styled.button`
-    padding: 15px 20px;
-    border-radius: 30px;
-    border: none;
-    align-items: center;
-    text-align: center;
-    background-color: rgba(40, 40, 40, 1);
-    color: #fff;
-    font-family: "DM Sans", sans-serif;
-    
-    &:hover{
-        background-color: #fff;
-        color: rgba(40, 40, 40, 1);
-        transition: 0.7s;
-    }
+  padding: 15px 20px;
+  border-radius: 30px;
+  border: none;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(40, 40, 40, 1);
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
 
-    @media (max-width: 744px) {
-        width: Hug(89px);
-    }
-`
+  &:hover {
+    background-color: #fff;
+    color: rgba(40, 40, 40, 1);
+    transition: 0.7s;
+  }
+`;
 
 export const HrefButton = styled.a`
-    color: #fff;
-`
+  color: #fff;
+`;
 
-export const TabletStyleWrapper = styled.div`
-    @media (min-width: 744px) {
-        display: none;
-    }
-    @media (max-width: 744px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        margin-top: 250px;
-    }
-    
-`
-
-export const TabletStyleTitle = styled.h1`
-    font-size: 58px;
-    text-align: center;
-    font-weight: bold;
-
-    @media (max-width: 445px) {
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 1px ;
-    }
-`
+export const MainImgWork = styled.img`
+  width: 552px;
+  height: 501px;
+`;
