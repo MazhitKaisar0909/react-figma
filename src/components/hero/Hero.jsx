@@ -25,9 +25,10 @@ import {
   BookService,
   Button,
   Arrow,
-  MainImgWork
+  MainImgWork,
+  SliderButtonWrapperMob,
 } from "./styled";
-import {Container} from '../../components/common/styled'
+import { Container } from "../../components/common/styled";
 import ImgBear from "../../assets/main/mainBigBear.png";
 import ImgSlider from "../../assets/main/slider.png";
 import Modal from "../common/modal/Modal";
@@ -90,18 +91,24 @@ const Hero = () => {
               But a selling one
             </TextButtonH2>
             <TextButtonP>
-              We combine everything the best features in one
-              <br /> projects: quality, speed, customizability and comfort.
+              We combine everything the best features in one projects: quality,
+              speed, customizability and comfort.
             </TextButtonP>
             <SliderButtonWrapper>
               <SilderButton onClick={handleModalOpen}>Contacts</SilderButton>
               <SilderButton>
-                <HrefButton href="#contact">Start a project</HrefButton>
+                <HrefButton href="#contact">Start project</HrefButton>
               </SilderButton>
             </SliderButtonWrapper>
             {isModalOpen && <Modal onClick={handleModalClose} />}
           </TextButtonWrapper>
           <MainImgWork src={ImgSlider} alt="slider" />
+          <SliderButtonWrapperMob>
+            <SilderButton onClick={handleModalOpen}>Contacts</SilderButton>
+            <SilderButton>
+              <HrefButton href="#contact">Start project</HrefButton>
+            </SilderButton>
+          </SliderButtonWrapperMob>
         </SliderWrapper>
       </Container>
     </HeroSection>
