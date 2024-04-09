@@ -3,13 +3,22 @@ import styled from "styled-components";
 export const StyledUl = styled.ul`
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 
   gap: 70px;
   margin-top: 100px;
+
+  position: absolute;
+  z-index: 1;
+
+  @media (min-width: 1024px) {
+    right: 20%;
+  }
 `;
 
 export const MiniBoxesCard = styled.li`
   width: 185px;
+  
 `;
 
 export const TopLine = styled.div`
