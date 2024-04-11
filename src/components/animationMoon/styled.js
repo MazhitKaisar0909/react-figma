@@ -2,7 +2,10 @@ import styled, { keyframes } from 'styled-components';
 
 export const ImgMoon = styled.img`
 
-width: 400px;
+width: 190px;
+    @media (min-width: 489px) {
+        width: 350px;
+    }
     @media (min-width: 768px) {
         width: 550px;
     }
@@ -13,10 +16,10 @@ width: 400px;
 
 export const rotateAnimation = keyframes`
     0% {
-        transform: perspective(1000px) rotateY(360deg) rotateX(12deg);
+        transform: perspective(1000px) rotateY(360deg) rotateX(12deg) ;
     }
     100% {
-        transform: perspective(1000px) rotateY(0deg) rotateX(15deg);
+        transform: perspective(1000px) rotateY(0deg) rotateX(15deg) ;
     }
 `;
 
@@ -24,14 +27,24 @@ export const Section = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 33vh;
     transform-style: preserve-3d;
-    margin: 0 auto 100px;
+    margin: 0 auto 400px;
+    @media (min-width: 489px) {
+        min-height: 33vh;
+    }
+    @media (min-width: 768px) {
+        min-height: 100vh;
+    }
 `;
 
 export const Moon = styled.div`
     position: absolute;
-    top: 450px;
+    top: 700px;
+    
+    @media (min-width: 489px) {
+        top: 550px
+    }
     @media (min-width: 768px) {
         top: 200px
     }
@@ -42,13 +55,15 @@ export const Circle = styled.div`
     animation: ${rotateAnimation} 20s linear infinite;
 
     position: absolute;
-    top: 60%;
-    
+    top: 125%;
+    @media (min-width: 489px) {
+        top: 100%;
+    }
     @media (min-width: 768px) {
-        top: 35%;
+        top: 20%;
     }
     @media (min-width: 1045px) {
-        top: 40%;
+        top: 43%;
     }
 `;
 
@@ -57,12 +72,17 @@ export const Span = styled.span`
     top: 150px;
     left: 0;
     color: rgba(147, 101, 255, 1);
-    font-size: 3em;
+    font-size: 1.5em;
     transform-origin: center;
     transform-style: preserve-3d;
     padding: 2px 1px;
-    transform: rotateY(calc(${props => props.index} * calc(360deg / 40))) translateZ(220px);
+    transform: rotateY(calc(${props => props.index} * calc(360deg / 40))) translateZ(130px);
 
+    @media (min-width: 489px) {
+        font-size: 3em;
+        transform: rotateY(calc(${props => props.index} * calc(360deg / 40))) translateZ(220px);
+    }
+    
     @media (min-width: 768px) {
         font-size: 4em;
         transform: rotateY(calc(${props => props.index} * calc(360deg / 40))) translateZ(320px);
