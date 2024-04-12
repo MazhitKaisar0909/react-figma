@@ -12,6 +12,7 @@ width: 190px;
     @media (min-width: 1045px) {
         width: 700px;
     }
+    
 `
 
 export const rotateAnimation = keyframes`
@@ -27,14 +28,18 @@ export const Section = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 33vh;
+    min-height: 55vh;
     transform-style: preserve-3d;
     margin: 0 auto 400px;
+    position: relative;
     @media (min-width: 489px) {
-        min-height: 33vh;
+        min-height: 50vh;
     }
     @media (min-width: 768px) {
-        min-height: 100vh;
+        min-height: 50vh;
+    }
+    @media (min-width: 1045px) {
+        min-height: 70vh;
     }
 `;
 
@@ -43,7 +48,7 @@ export const Moon = styled.div`
     top: 700px;
     
     @media (min-width: 489px) {
-        top: 550px
+        top: 450px
     }
     @media (min-width: 768px) {
         top: 200px
@@ -60,11 +65,12 @@ export const Circle = styled.div`
         top: 100%;
     }
     @media (min-width: 768px) {
-        top: 20%;
+        top: 50%;
     }
     @media (min-width: 1045px) {
-        top: 43%;
+        top: 60%;
     }
+    
 `;
 
 export const Span = styled.span`
